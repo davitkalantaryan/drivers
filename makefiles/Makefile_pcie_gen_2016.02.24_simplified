@@ -1,0 +1,17 @@
+MODULE_NAME	= pcie_gen_drv
+PARENT_MODULE	= upciedev
+
+MODULE_OBJECTS	= \
+	global_pointer_container.o \
+	mtcagen_dma.o \
+	mtcagen_gain_rel.o \
+	mtcagen_irq_all.o \
+	mtcagen_irq_type1.o \
+	mtcagen_irq_type2.o \
+	pci-driver-added-zeuthen.o \
+	mtcagen_main.o \
+	mtcagen_ioctl.o
+	
+#ACTION = $(shell cp ../../../makefiles/makefile_standard .)
+	
+include ./makefile_standard

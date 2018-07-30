@@ -1,0 +1,7 @@
+0xa0c02452	General_Write1	/doocs/develop/kalantar/programs/cpp/works/drivers/sources_gen/pcie_gen_drv	EXPORT_SYMBOL
+0x43b5290e	General_ioctl	/doocs/develop/kalantar/programs/cpp/works/drivers/sources_gen/pcie_gen_drv	EXPORT_SYMBOL
+0x4b37a390	General_ioctl2	/doocs/develop/kalantar/programs/cpp/works/drivers/sources_gen/pcie_gen_drv	EXPORT_SYMBOL
+0x7740d9a2	General_GainAccess1	/doocs/develop/kalantar/programs/cpp/works/drivers/sources_gen/pcie_gen_drv	EXPORT_SYMBOL
+0xd902de16	General_Read1	/doocs/develop/kalantar/programs/cpp/works/drivers/sources_gen/pcie_gen_drv	EXPORT_SYMBOL
+0xd77f8a1f	RemovePID1	/doocs/develop/kalantar/programs/cpp/works/drivers/sources_gen/pcie_gen_drv	EXPORT_SYMBOL
+0x792e04b4	Gen_ReleaseAccsess	/doocs/develop/kalantar/programs/cpp/works/drivers/sources_gen/pcie_gen_drv	EXPORT_SYMBOL

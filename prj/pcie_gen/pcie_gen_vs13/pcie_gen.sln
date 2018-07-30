@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcie_gen", "pcie_gen\pcie_gen.vcxproj", "{1498E461-BE34-431D-9EB2-227A5B07FEDA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{398FB55E-9603-4537-9950-E031DD4D5488}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1498E461-BE34-431D-9EB2-227A5B07FEDA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1498E461-BE34-431D-9EB2-227A5B07FEDA}.Debug|Win32.Build.0 = Debug|Win32
+		{1498E461-BE34-431D-9EB2-227A5B07FEDA}.Release|Win32.ActiveCfg = Release|Win32
+		{1498E461-BE34-431D-9EB2-227A5B07FEDA}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

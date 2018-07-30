@@ -1,0 +1,1 @@
+cmd_/afs/ifh.de/group/pitz/doocs/develop/kalantar/programs/cpp/works/drivers/sources/test_drv.o := ld -m elf_x86_64   -r -o /afs/ifh.de/group/pitz/doocs/develop/kalantar/programs/cpp/works/drivers/sources/test_drv.o /afs/ifh.de/group/pitz/doocs/develop/kalantar/programs/cpp/works/drivers/sources/test4.o 

@@ -1,0 +1,63 @@
+
+
+#DOOCS	=	/afs/ifh.de/group/pitz/doocs
+#SYSTEM	=	i586_rhel50
+#SYSTEM	=	amd64_rhel60
+#SYSTEM	= sun4x_58
+#MY_ROOT = /doocs/develop/kalantar
+#RUNDIRECTORY = /export/doocs/server/adcsender
+
+
+OS		= $(shell uname -s)
+
+ifeq ($(OS),Linux)
+	CPP = g++
+	LINK = g++
+	CFLAGS= -O2 -DLINUX -D_REENTRANT -D_GNU_SOURCE -D_BSD -D__USE_GNU -D__USE_UNIX98
+	LFLAGS  = -O2
+	#LIBS= -O2 -lpthread -lrt -lresolv -lnsl
+	LIBS= -lpthread
+	
+	TARGET = test_drivers_lin
+	 
+else
+	# Both compilers works
+	CPP = g++
+	LINK = g++
+	#CPP = g++
+	#LINK = g++
+	CFLAGS= -O2 -DLINUX -D_REENTRANT -D_GNU_SOURCE -D_BSD -D__USE_GNU -D__USE_UNIX98 
+	LFLAGS  = -O2
+	#LIBS = -lsocket -lnsl -lpthread -lrt
+	LIBS = -lpthread -lrt
+	
+	TARGET = testgroup_sol
+endif
+
+
+
+all: $(TARGET)
+
+
+##########################################################################################################
+testthreadsgroup.o: 
+	$(CPP) -c $(CFLAGS) -o test_drivers.o	test_drivers.cpp
+
+
+$(TARGET): test_drivers.o 
+						@echo "*** Linking $(TARGET)"
+						$(LINK) *.o $(LIBS) $(LFLAGS) -o $(TARGET)
+						#@rm -f *.o
+						#@cp $(TARGET) $(RUNDIRECTORY)/$(TARGET)
+						
+
+# Rule for generating object files from C++ source files
+.cpp.o: 
+	@echo "*** Compiling $<"
+	$(CPP) -c $(CFLAGS) $<
+	#$(CPP) -c $(CFLAGS) -o "$@" "$<"
+	#$(CXX) -c $(CXXFLAGS) $(INCPATH) -o "$@" "$<"
+
+clean:	
+	@rm -f *.o
+

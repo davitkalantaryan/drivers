@@ -1,0 +1,12 @@
+test_drv-objs := test4.o
+obj-m := test_drv.o 
+
+
+KVERSION = $(shell uname -r)
+all:
+	#make -C /lib/modules/$(KVERSION)/build V=1 M=$(PWD) modules
+	make -C /lib/modules/$(KVERSION)/build M=$(PWD) modules
+clean:
+	#test ! -d /lib/modules/$(KVERSION) || make -C /lib/modules/$(KVERSION)/build V=1 M=$(PWD) clean
+	test ! -d /lib/modules/$(KVERSION) || make -C /lib/modules/$(KVERSION)/build M=$(PWD) clean
+

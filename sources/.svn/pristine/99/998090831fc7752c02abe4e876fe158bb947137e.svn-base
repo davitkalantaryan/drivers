@@ -1,0 +1,2 @@
+SUBSYSTEM=="sis1100",           MODE="0666"
+SUBSYSTEM=="sis8300*",           MODE="0666"

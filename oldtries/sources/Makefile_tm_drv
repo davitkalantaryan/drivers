@@ -1,0 +1,10 @@
+timer_drv_dvm-objs := timer_drv_dv2.o pciedev_drv_exp_dv.o
+obj-m := timer_drv_dvm.o 
+
+
+KVERSION = $(shell uname -r)
+all:
+	make -C /lib/modules/$(KVERSION)/build M=$(PWD) modules
+clean:
+	test ! -d /lib/modules/$(KVERSION) || make -C /lib/modules/$(KVERSION)/build M=$(PWD) clean
+

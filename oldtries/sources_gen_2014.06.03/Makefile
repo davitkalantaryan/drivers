@@ -1,0 +1,23 @@
+pcie_gen_drv-objs := pcie_gen_exp.o pcie_gen.o 
+obj-m := pcie_gen_drv.o
+
+#timer_drv6.o:
+#	cc -c -I/usr/include timer_drv6.o
+
+all: compile install
+
+KVERSION = $(shell uname -r)
+copy:
+	sudo cp pcie_gen_drv.ko /lib/modules/$(KVERSION)/desy_zeuthen/.
+install:
+	sudo rmmod pcie_gen_drv
+	sudo insmod pcie_gen_drv.ko
+	sudo cp pcie_gen_drv.ko /lib/modules/$(KVERSION)/desy_zeuthen/.
+compile:
+	make -C /lib/modules/$(KVERSION)/build M=$(PWD) modules
+clean:
+	test ! -d /lib/modules/$(KVERSION) || make -C /lib/modules/$(KVERSION)/build M=$(PWD) clean
+	
+#EXTRA_CFLAGS	+= -I/usr/include
+EXTRA_CFLAGS	+= -I/doocs/develop/include
+

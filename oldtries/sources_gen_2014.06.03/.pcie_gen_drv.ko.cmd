@@ -1,0 +1,1 @@
+cmd_/doocs/develop/kalantar/programs/cpp/works/drivers/sources_gen/pcie_gen_drv.ko := ld -m elf_x86_64 -r -o /doocs/develop/kalantar/programs/cpp/works/drivers/sources_gen/pcie_gen_drv.ko /doocs/develop/kalantar/programs/cpp/works/drivers/sources_gen/pcie_gen_drv.o /doocs/develop/kalantar/programs/cpp/works/drivers/sources_gen/pcie_gen_drv.mod.o
